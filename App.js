@@ -1,52 +1,22 @@
 import React, { useState } from "react";
 import { Switch, TextInput, View } from "react-native";
-import AccountScreen from "./app/components/AccountScreen";
+import AccountScreen from "./app/screens/AccountScreen";
 
 import AppButton from "./app/components/AppButton";
 import AppPicker from "./app/components/AppPicker";
 import AppTextInput from "./app/components/AppTextInput";
 import Card from "./app/components/Card";
 import Icon from "./app/components/Icon";
-import ListingDetailsScreen from "./app/components/ListingDetailsScreen";
-import ListingScreen from "./app/components/ListingScreen";
-import ListItem from "./app/components/ListItem";
-import MessagesScreen from "./app/components/MessagesScreen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
+import ListingScreen from "./app/screens/ListingScreen";
+import ListItem from "./app/components/lists/ListItem";
+import LoginScreen from "./app/screens/LoginScreen";
+import MessagesScreen from "./app/screens/MessagesScreen";
 import Screen from "./app/components/Screen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
 import WelcomeScreen from "./app/screens/WelcomScreen";
 
-const categories = [
-  {
-      label: "Furniture",
-      value: 1
-  },
-  {
-      label: "Clothing",
-      value: 2
-  },
-  {
-      label: "Camera",
-      value: 3
-  }
-]
-
 export default function App() {
-
-  const [category, setCategory] = useState(categories[0])
-
-  return (
-      <Screen>
-        <AppPicker
-          selectedItem={category}
-          onSelectItem={text => setCategory(text)}
-          icon="apps" 
-          placeholder="Category"
-          items={categories}
-        />
-        <AppTextInput 
-          icon="email" 
-          placeholder="Email" 
-        />
-      </Screen>
-  );
+  return <ListingEditScreen />
 }

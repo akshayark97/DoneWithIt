@@ -1,8 +1,8 @@
 import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { FlatList } from 'react-native-gesture-handler'
-import Card from './Card'
-import Screen from './Screen'
+import Card from '../components/Card'
+import Screen from '../components/Screen'
 import colors from '../../config/colors'
 
 const listings = [
